@@ -1,10 +1,19 @@
 import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Home from "./pages/Home";
+import MovieApp from "./projects/MoviesApp/MovieApp";
+import TaskApp from "./projects/TasksApp/TasksApp";
 
 function App() {
   return (
-    <>
-      <h1>Hello World</h1>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/movie-app" element={<MovieApp />} />
+        <Route path="/tasks-app" element={<TaskApp />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
